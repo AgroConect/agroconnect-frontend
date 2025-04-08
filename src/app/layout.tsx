@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // Add different font weights if needed
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,11 +30,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${inter.className} w-full`}>
+        <main className="w-full h-full">{children}</main>
+      </body>
+      {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-      </body>
+      </body> */}
     </html>
   );
 }
