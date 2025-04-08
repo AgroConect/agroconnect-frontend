@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌱 AgroConnect
 
-## Getting Started
+AgroConnect is a platform that connects farmers directly with customers, eliminating middlemen. Farmers can sell produce, shop for discounted farm machinery, and access weather forecasts to optimize farming decisions. 🚜🌾
 
-First, run the development server:
+## 📌 Getting Started
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+To contribute to this project, follow these steps to **clone**, **pull**, and **push** changes.
+
+---
+
+## **🔹 Clone the Repository**
+
+To get a local copy of AgroConnect, run the following command in your terminal:
+
+```sh
+git clone https://github.com/AgroConect/agroconnect-frontend
+
+
+# For React/Next.js frontend:
+npm install
+
+# Pull the Latest Changes
+# Before making any changes, always pull the latest updates from the repository:
+git pull origin main
+
+# Create a New Branch
+# To work on a new feature or fix a bug, create a separate branch:
+git checkout -b feature-branch-name
+
+
+# Make Changes and Commit
+# After making changes, stage them using:
+git add .
+
+# Then commit the changes with a meaningful message:
+git commit -m "Added authentication system"
+
+# Push Changes to GitHub
+# Push your branch to the remote repository:
+
+git push origin feature-branch-name
+
+# After pushing, create a Pull Request (PR) on GitHub to merge your changes into the main branch.
+
+# Switching Between Branches
+# If you need to switch back to the main branch:
+git checkout main
+
+# Then, pull the latest changes:
+git pull origin main
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🛠 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+⚙️ API Documentation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🤝 Contributors
+Thanks to all contributors for making this project possible! 💪
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Muhammedfuad Bashar
+Uthman Ipadeola
+Saheed Tijani
