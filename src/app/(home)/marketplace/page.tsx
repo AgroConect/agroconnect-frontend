@@ -1,3 +1,3 @@
-export default function MarketPlace() {
+export default function Page() {
   return <div>MarketPlace</div>;
 }

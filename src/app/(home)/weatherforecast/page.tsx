@@ -1,3 +1,3 @@
-export default function Weather() {
+export default function Page() {
   return <div>Weather Forecast</div>;
 }
