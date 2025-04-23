@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Blog () {
+export default function Page () {
   return (
     <div className="container mx-auto p-8">
       <h1 className="text-4xl font-bold text-primary mb-6">Our Blog</h1>

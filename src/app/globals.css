@@ -16,12 +16,12 @@
   --background-color: #f4f7fc;
   --text-color: #212121;
   --neutral-color: #9e9e9e;
-  --primary: #2D6A4F;
-  --lightGreen: #74C69D;
-  --beige: #F0E5CF;
-  --accent: #E76F51;
-  --darkText: #2B2D42;
-  --lightBg: #FAFAFA;
+  --primary: #4baf47;
+  --lightGreen: #74c69d;
+  --beige: #f0e5cf;
+  --accent: #e76f51;
+  --darkText: #2b2d42;
+  --lightBg: #fafafa;
 }
 
 body {
@@ -34,6 +34,14 @@ body {
   color: var(--text-color);
 }
 
+.grace-font {
+  font-family: "Covered By Your Grace", cursive;
+}
+
+.font-signika {
+  font-family: "Signika";
+}
+
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -43,7 +51,7 @@ a:hover {
   color: var(--secondary-color);
 }
 
-button {
+.button {
   background-color: var(--primary-color);
   color: #fff;
   padding: 10px 20px;
@@ -51,7 +59,7 @@ button {
   border: none;
 }
 
-button:hover {
+.button:hover {
   background-color: var(--secondary-color);
 }
 
@@ -62,8 +70,34 @@ button:hover {
 }
 
 footer {
-  background-color: var(--neutral-color);
+  /* background-color: var(--neutral-color); */
   color: #fff;
   padding: 10px;
   text-align: center;
+}
+
+/* Stroke text (outlined letters) */
+.stroke-text {
+  color: transparent;
+  -webkit-text-stroke: 1px #7bb66d; /* Green stroke */
+  text-stroke: 1px #7bb66d; /* For Firefox (experimental) */
+}
+
+/* Optional: hover to fill stroke with green */
+.stroke-text:hover {
+  color: #7bb66d;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }
