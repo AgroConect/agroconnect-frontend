@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
     return [
       // Basic redirect
       {
-        source: "/home",
-        destination: "/",
+        source: "/",
+        destination: "/home",
         permanent: true,
       },
       // // Wildcard path matching
