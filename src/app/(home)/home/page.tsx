@@ -1,13 +1,4 @@
 import Image from "next/image";
-import {
-  FaTwitter,
-  FaFacebookF,
-  FaPinterest,
-  FaInstagram,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
 
 import { Covered_By_Your_Grace } from "next/font/google";
 import leaf2 from "./../../../public/svg/leaf2.svg";
@@ -83,7 +74,7 @@ export default function Page() {
         style={{ backgroundImage: `url('/images/home-hero1.jpg')` }}
       >
         <div className="bg-black/40 absolute inset-0 z-0" />
-        <div className="container w-[40%] relative px-12 text-white">
+        <div className="container lg:w-[40%] relative px-12 text-white">
           <h5 className="text-lg mb-2 uppercase">Welcome to Agroconnect</h5>
           <h1 className="text-[5rem] grace-font font leading-tight mb-4 relative">
             Agriculture <span className="text-[#EEC044]">&</span> <br />
@@ -116,20 +107,6 @@ export default function Page() {
       </section>
 
       <ScrollingMarquee />
-
-      <section className="bg-[#fefef8] px-6 py-16">
-        <div className="max-w-7xl mx-auto flex flex-col items-center">
-          <div className="text-xs uppercase font-semibold text-center text-gray-400 mb-2">
-            <span className="px-2 py-1 bg-gray-100 text-center rounded-full">
-              MarketPlace
-            </span>
-          </div>
-          <h2 className="w-[30%] text-3xl md:text-4xl text-center font-extrabold text-[#3c4f3d]">
-            Best Agricultural Products
-          </h2>
-        </div>
-        <div className="flex justify-center gap-[2rem] items-center mt-[3rem]"></div>
-      </section>
 
       <section className="bg-[#5a9052] px-6 py-16 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-white">
