@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function Page() {
-  return          <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md space-y-6 z-40">
+  return          <div>
          <h2 className="text-2xl font-bold text-center text-green-700">Welcome Back 👋</h2>
     
     <form className="space-y-4">
@@ -22,7 +22,7 @@ export default function Page() {
     Login
   </button>
   <p className="text-sm text-center">
-    Don’t have an account? <Link href="/signup" className="text-green-700 hover:underline">Sign up</Link>
+    Don’t have an account? <Link href="/register" className="text-green-700 hover:underline">Sign up</Link>
   </p>
 </form></div>;
 }

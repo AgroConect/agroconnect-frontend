@@ -14,7 +14,7 @@ export default function EmailVerification() {
   };
 
   return (
-    <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md space-y-6 z-40">
+    <div>
          <h2 className="text-2xl font-bold text-center text-green-700">CVerify Your Email ✉️</h2>
       <div className="flex flex-col items-center text-center space-y-4">
         <MailCheck className="w-12 h-12 text-green-600" />

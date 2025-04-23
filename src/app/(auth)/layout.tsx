@@ -4,7 +4,6 @@ export default function Layout({ title, children }: { title: string; children: R
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#fefef8] p-4 relative font-signika">
         <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md space-y-6 z-40">
-          <h2 className="text-2xl font-bold text-center text-green-700">{title}</h2>
           <div className="">
           {children}
           </div>

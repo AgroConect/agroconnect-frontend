@@ -1,7 +1,7 @@
 import { Link } from "lucide-react";
 
 export default function Page() {
-  return          (<div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md space-y-6 z-40">
+  return          (<div>
          <h2 className="text-2xl font-bold text-center text-green-700">Create Account 🌱</h2>
     <form className="space-y-4">
   <div>
@@ -20,7 +20,7 @@ export default function Page() {
     Sign Up
   </button>
   <p className="text-sm text-center">
-    Already have an account? <Link href="/login" className="text-green-700 hover:underline">Log in</Link>
+    Already have an account? <Link href="/login" className="text-green-700 hover:underline">Login</Link>
   </p>
 </form></div>);
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Page (){
     return(
-        <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md space-y-6 z-40">
+        <div >
          <h2 className="text-2xl font-bold text-center text-green-700">Reset Password 🔐</h2>
             <form className="space-y-4">
         <div>
