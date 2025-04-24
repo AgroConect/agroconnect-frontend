@@ -1,7 +1,9 @@
+"use client"
+
 import { MailCheck, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 
-export default function EmailVerification() {
+export default function Page() {
   const [loading, setLoading] = useState(false);
   const [resent, setResent] = useState(false);
 
@@ -15,7 +17,7 @@ export default function EmailVerification() {
 
   return (
     <div>
-         <h2 className="text-2xl font-bold text-center text-green-700">CVerify Your Email ✉️</h2>
+         <h2 className="text-2xl font-bold text-center text-green-700">Verify Your Email ✉️</h2>
       <div className="flex flex-col items-center text-center space-y-4">
         <MailCheck className="w-12 h-12 text-green-600" />
         <p className="text-sm text-gray-600">
