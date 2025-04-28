@@ -1,16 +1,15 @@
 import Image from "next/image";
 
-import { Covered_By_Your_Grace } from "next/font/google";
-import leaf2 from "./../../../public/svg/leaf2.svg";
+// import { Covered_By_Your_Grace } from "next/font/google";
+// import leaf2 from "./../../../public/svg/leaf2.svg";
 import ScrollingMarquee from "@/components/forms/Marquees";
 
-const grace = Covered_By_Your_Grace({
-  weight: "400",
-  style: ["normal"],
-  subsets: ["latin"],
-});
+// const grace = Covered_By_Your_Grace({
+//   weight: "400",
+//   style: ["normal"],
+//   subsets: ["latin"],
+// });
 import {
-  ArrowUpRight,
   Calendar,
   User,
   ChevronLeft,
@@ -71,7 +70,7 @@ export default function Page() {
       {/* Hero Section */}
       <section
         className="relative h-[80vh] bg-cover bg-center flex items-center justify-start overflow-y-auto mb-12"
-        style={{ backgroundImage: `url('/images/home-hero1.jpg')` }}
+        style={{ backgroundImage: url('/images/home-hero1.jpg') }}
       >
         <div className="bg-black/40 absolute inset-0 z-0" />
         <div className="container lg:w-[40%] relative px-12 text-white">
@@ -178,24 +177,24 @@ export default function Page() {
       </section>
 
       <section className="bg-[#fefef8] px-6 py-16">
-        <div className="max-w-7xl mx-auto flex flex-col items-center">
+        <div className="lg:max-w-7xl mx-auto flex flex-col items-center">
           <div className="text-xs uppercase font-semibold text-center text-gray-400 mb-2">
             <span className="px-2 py-1 bg-gray-100 text-center rounded-full">
               Grow Naturally
             </span>
           </div>
-          <h2 className="w-[30%] text-3xl md:text-4xl text-center font-extrabold text-[#3c4f3d]">
-            Choose What's Perfect For Your Field
+          <h2 className="lg:w-[30%] text-3xl md:text-4xl text-center font-extrabold text-[#3c4f3d]">
+            Choose What&apos;s Perfect For Your Field
           </h2>
         </div>
-        <div className="flex justify-center gap-[2rem] items-center mt-[3rem]">
+        <div className="flex flex-col lg:flex-row justify-center gap-[2rem] items-center mt-[3rem]">
           <div className="flex flex-col gap-[4rem]">
             <div className="flex gap-[2rem]">
               <div className="w-[4rem] h-[4rem] rounded-full bg-[#f3e38e] flex items-center justify-center shadow hover:bg-[#e9dc59]">
                 <Image
                   src={"/svg/hand.svg"}
                   alt="hand"
-                  className="h-[2.5rem] w-[2.5rem] "
+                  className="h-[1.5rem] w-[1.5rem] lg:h-[2.5rem] lg:w-[2.5rem]"
                   height={480}
                   width={480}
                 />
@@ -235,7 +234,7 @@ export default function Page() {
             <Image
               src={"/images/corn.png"}
               alt="corn"
-              className="h-[26rem] w-[20rem] "
+              className="h-[26rem] w-[24rem] hidden lg:block "
               height={480}
               width={480}
             />
