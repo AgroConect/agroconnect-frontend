@@ -41,7 +41,7 @@ const products = [
 
 export default function Page() {
   return (
-    <section className="bg-[#fefef8] py-16 px-4">
+    <section className="bg-[#fefef8] py-16 px-12">
       {/* HERO */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 bg-[#5a9052] rounded-3xl overflow-hidden p-8 mb-12 text-white">
         <div className="flex-1">
@@ -80,11 +80,11 @@ export default function Page() {
 
       {/* PRODUCTS */}
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
+        <div className="flex lg:flex-col flex-row justify-between items-center mb-8 gap-4">
           <h3 className="text-2xl font-semibold text-[#3c4f3d]">
             Check Our Products
           </h3>
-          <div className="w-full flex gap-2 place-content-end">
+          <div className="sm:w-full lg:hidden flex gap-2 place-content-end lg:place-content-center">
             <button className="p-2 border rounded hover:bg-gray-100">
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -129,6 +129,14 @@ export default function Page() {
             </div>
           ))}
         </div>
+        <div className="sm:w-full lg:flex gap-2 hidden mt-[5rem] lg:place-content-center">
+            <button className="p-2 border rounded hover:bg-gray-100">
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button className="p-2 border rounded hover:bg-gray-100">
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
       </div>
     </section>
   );
