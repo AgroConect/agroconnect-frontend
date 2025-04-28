@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AboutPage() {
+export default function Page (){
   return (
     <section className="bg-[#fefef8] py-16 px-4">
       <div className="max-w-7xl mx-auto space-y-10">
