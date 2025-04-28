@@ -84,7 +84,7 @@ export default function Page() {
           <h3 className="text-2xl font-semibold text-[#3c4f3d]">
             Check Our Products
           </h3>
-          <div className="flex gap-2">
+          <div className="w-full flex gap-2 place-content-end">
             <button className="p-2 border rounded hover:bg-gray-100">
               <ChevronLeft className="w-4 h-4" />
             </button>
