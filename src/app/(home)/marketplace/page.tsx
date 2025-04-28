@@ -11,17 +11,25 @@ import Image from "next/image";
 
 const features = [
   {
-    icon: <ShoppingCart />,
-    label: "Member Discount",
+    icon: <ShoppingCart />, 
+    label: "Member Discount", 
     desc: "Only for selected User App",
   },
   {
-    icon: <RotateCcw />,
-    label: "Money Return",
+    icon: <RotateCcw />, 
+    label: "Money Return", 
     desc: "Back guarantee in 7 days",
   },
-  { icon: <Truck />, label: "Free Shipping", desc: "Order over $100" },
-  { icon: <Headphones />, label: "Online Support", desc: "Support 24/7" },
+  { 
+    icon: <Truck />, 
+    label: "Free Shipping", 
+    desc: "Order over $100"
+  },
+  { 
+    icon: <Headphones />, 
+    label: "Online Support", 
+    desc: "Support 24/7"
+  },
 ];
 
 const products = [
@@ -35,9 +43,9 @@ export default function Page() {
   return (
     <section className="bg-[#fefef8] py-16 px-4">
       {/* HERO */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8 bg-[#5a9052] rounded-3xl overflow-hidden p-8 mb-12 text-white">
-        <div>
-          <span className="text-sm bg-white text-green-700 px-3 py-1 rounded-full font-semibold">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 bg-[#5a9052] rounded-3xl overflow-hidden p-8 mb-12 text-white">
+        <div className="flex-1">
+          <span className="text-sm bg-white text-green-700 px-3 py-1 rounded-full font-semibold inline-block">
             100% Natural Organic
           </span>
           <h2 className="mt-4 text-4xl font-bold leading-tight">
@@ -48,21 +56,23 @@ export default function Page() {
             Contact Us →
           </button>
         </div>
-        <Image
-          src="/images/market-hero.png"
-          alt="farm"
-          height={480}
-          width={480}
-          className="rounded-2xl object-cover w-full h-80 lg:h-full"
-        />
+        <div className="flex-1 w-full">
+          <Image
+            src="/images/market-hero.png"
+            alt="farm"
+            height={480}
+            width={480}
+            className="rounded-2xl object-cover w-full h-64 sm:h-80 lg:h-full"
+          />
+        </div>
       </div>
 
       {/* FEATURES */}
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-center gap-6 mb-16">
+      <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 mb-16">
         {features.map((f, i) => (
-          <div key={i} className="flex-1 min-w-[150px] text-gray-700 space-y-1">
-            <div className="text-yellow-600 mx-auto w-10 h-10">{f.icon}</div>
-            <h4 className="font-semibold">{f.label}</h4>
+          <div key={i} className="flex flex-col items-center min-w-[140px] text-gray-700 space-y-2 text-center">
+            <div className="text-yellow-600 w-10 h-10 flex items-center justify-center">{f.icon}</div>
+            <h4 className="font-semibold text-sm">{f.label}</h4>
             <p className="text-xs text-gray-500">{f.desc}</p>
           </div>
         ))}
@@ -70,7 +80,7 @@ export default function Page() {
 
       {/* PRODUCTS */}
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
           <h3 className="text-2xl font-semibold text-[#3c4f3d]">
             Check Our Products
           </h3>
@@ -84,21 +94,23 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {products.map((product, i) => (
             <div
               key={i}
               className="bg-white text-center rounded-2xl p-4 shadow hover:shadow-lg transition relative group"
             >
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                height={480}
+                width={480}
                 className="w-24 h-24 object-contain mx-auto mb-3"
               />
-              <h4 className="font-semibold text-gray-700 mb-1">
+              <h4 className="font-semibold text-gray-700 mb-1 text-sm">
                 {product.name}
               </h4>
-              <div className="text-sm text-gray-500">
+              <div className="text-xs text-gray-500">
                 {product.discount ? (
                   <>
                     <span className="line-through mr-1 text-gray-400">
