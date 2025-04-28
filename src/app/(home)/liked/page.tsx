@@ -1,3 +1,3 @@
-export default function LikedProduct() {
+export default function Page() {
   return <div>LikedProduct</div>;
 }
