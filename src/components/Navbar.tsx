@@ -26,12 +26,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-primary text-white h-[4rem] p-4 shadow-md fixed w-full flex justify-between items-center">
+    <nav className="bg-white text-white h-[4rem] z-20 p-4 shadow-md fixed w-full flex justify-between items-center">
       {/* Logo */}
       <Link href="/" className="text-xl font-bold">
         AgroConnect
       </Link>
-      
+
       <div className="flex space-x-4">
         {links.map((link) => (
           <Link
@@ -47,14 +47,79 @@ export default function Navbar() {
         ))}
       </div>
 
-      <div className="flex space-x-4">
-        <button className="p-2 hover:bg-neutral rounded">
-          <Heart size={20} />
-        </button>
-        <button className="p-2 hover:bg-neutral rounded">
-          <ShoppingCart size={20} />
-        </button>
-      </div>
+  {/* Action Buttons */}
+  <div className="flex space-x-4 items-center">
+    <Link href="/login">
+      <button className="px-4 py-2 rounded border border-secondary text-secondary cursor-pointer">
+        Login
+      </button>
+    </Link>
+    <Link href="/register">
+      <button className="px-4 py-2 rounded text-white bg-green-800 transition cursor-pointer hover:opacity-80">
+        Join Us
+      </button>
+    </Link>
+    <button className="p-2 hover:bg-neutral rounded">
+      <Heart size={20} color="#2d6a4f" />
+    </button>
+    <button className="p-2 hover:bg-neutral rounded">
+      <ShoppingCart size={20} color="#2d6a4f" />
+    </button>
+  </div>
     </nav>
+
+    // {/* Top Header */}
+    // <div className="bg-[#f3f3f3] text-sm text-gray-700 px-8 py-2 flex justify-between items-center">
+    //   <div className="flex gap-4">
+    //     <a href="#">
+    //       <FaPhoneAlt className="inline mr-1" /> +94 (000) - 9630
+    //     </a>
+    //     <a href="#">
+    //       <FaEnvelope className="inline mr-1" /> ambed@agrios.com
+    //     </a>
+    //     <a href="#">
+    //       <FaMapMarkerAlt className="inline mr-1" /> Melbourne, Australia
+    //     </a>
+    //   </div>
+    //   <div className="flex gap-4">
+    //     <FaTwitter />
+    //     <FaFacebookF />
+    //     <FaPinterest />
+    //     <FaInstagram />
+    //   </div>
+    // </div>
+
+    // {/* Navbar */}
+    // <nav className="flex items-center justify-between px-8 py-5 shadow bg-white">
+    //   <div className="text-2xl font-bold text-green-700">
+    //     <span className="text-black">Agrios</span> 🌱
+    //   </div>
+    //   <ul className="flex gap-6 text-gray-700 font-medium">
+    //     <li>
+    //       <a href="#">Home</a>
+    //     </li>
+    //     <li>
+    //       <a href="#">About</a>
+    //     </li>
+    //     <li>
+    //       <a href="#">Services</a>
+    //     </li>
+    //     <li>
+    //       <a href="#">Projects</a>
+    //     </li>
+    //     <li>
+    //       <a href="#">News</a>
+    //     </li>
+    //     <li>
+    //       <a href="#">Shop</a>
+    //     </li>
+    //     <li>
+    //       <a href="#">Contact</a>
+    //     </li>
+    //   </ul>
+    //   <div className="relative">
+    //     <button className="text-gray-600 hover:text-green-600">🛒</button>
+    //   </div>
+    // </nav>
   );
-};
+}
