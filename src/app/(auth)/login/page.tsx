@@ -71,7 +71,7 @@ export default function Page() {
           </button>
 
           <p className="text-sm text-center">
-            Don’t have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/register" className="text-green-700 hover:underline">
               Sign up
             </Link>
