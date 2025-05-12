@@ -70,7 +70,7 @@ export default function Page() {
       {/* Hero Section */}
       <section
         className="relative h-[80vh] bg-cover bg-center flex items-center justify-start overflow-y-auto mb-12"
-        style={{ backgroundImage: url('/images/home-hero1.jpg') }}
+        style={{ backgroundImage: "url('/images/home-hero1.jpg')" }}
       >
         <div className="bg-black/40 absolute inset-0 z-0" />
         <div className="container lg:w-[40%] relative px-12 text-white">

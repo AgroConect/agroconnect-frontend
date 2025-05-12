@@ -47,14 +47,25 @@ export default function Navbar() {
         ))}
       </div>
 
-      <div className="flex space-x-4">
-        <button className="p-2 hover:bg-neutral rounded">
-          <Heart size={20} color="#2d6a4f" />
-        </button>
-        <button className="p-2 hover:bg-neutral rounded">
-          <ShoppingCart size={20} color="#2d6a4f" />
-        </button>
-      </div>
+  {/* Action Buttons */}
+  <div className="flex space-x-4 items-center">
+    <Link href="/login">
+      <button className="px-4 py-2 rounded border border-secondary text-secondary cursor-pointer">
+        Login
+      </button>
+    </Link>
+    <Link href="/register">
+      <button className="px-4 py-2 rounded text-white bg-green-800 transition cursor-pointer hover:opacity-80">
+        Join Us
+      </button>
+    </Link>
+    <button className="p-2 hover:bg-neutral rounded">
+      <Heart size={20} color="#2d6a4f" />
+    </button>
+    <button className="p-2 hover:bg-neutral rounded">
+      <ShoppingCart size={20} color="#2d6a4f" />
+    </button>
+  </div>
     </nav>
 
     // {/* Top Header */}

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const Card = ({ className, children }) => {
+const Card = ({ className, children }:{className:string,children:React.ReactNode}) => {
   return (
     <div className={`border rounded-lg shadow-md p-4 bg-white ${className}`}>
       {children}
@@ -8,7 +8,7 @@ const Card = ({ className, children }) => {
   );
 };
 
-const CardContent = ({ children }) => {
+const CardContent = ({ children }:{children:React.ReactNode}) => {
   return <div className="p-2">{children}</div>;
 };
 
