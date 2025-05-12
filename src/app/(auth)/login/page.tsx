@@ -1,6 +1,30 @@
+"use client"
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { loginUser } from "@/utils/api";
+import { useState } from "react";
 
 export default function Page() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setErrorMsg("");
+    
+    try {
+      await loginUser({ email, password });
+      router.push("/"); // Redirect to homepage
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+    setErrorMsg(
+    error?.response?.data?.error || "Login failed. Please try again."
+    );
+    }
+    };
+
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-8 bg-gray-50">
       <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
@@ -8,13 +32,19 @@ export default function Page() {
           Welcome Back 👋
         </h2>
 
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={handleLogin}>
+        {errorMsg && (
+            <div className="text-red-500 text-sm text-center">{errorMsg}</div>
+          )}
           <div>
             <label className="block text-sm font-medium">Email</label>
             <input
               type="email"
               className="w-full border rounded p-2 mt-1"
               placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
 
@@ -24,6 +54,9 @@ export default function Page() {
               type="password"
               className="w-full border rounded p-2 mt-1"
               placeholder="••••••••"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
 
